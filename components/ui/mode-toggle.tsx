@@ -1,40 +1,30 @@
 "use client"
-
-import * as React from "react"
-import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
+import { Moon, Sun } from "lucide-react"
+import { useEffect, useState } from "react"
 
-import { Button } from "@/components/ui/button"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+export default function ThemeToggle() {
+    const { theme, setTheme } = useTheme()
+    const [mounted, setMounted] = useState(false)
 
-export function ModeToggle() {
-    const { setTheme } = useTheme()
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    if (!mounted) return null
+
+    const isDark = theme === "dark"
 
     return (
-        <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon" className="cursor-pointer">
-                    <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                    <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                    <span className="sr-only">Toggle theme</span>
-                </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
-                    Light
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
-                    Dark
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("system")}>
-                    System
-                </DropdownMenuItem>
-            </DropdownMenuContent>
-        </DropdownMenu>
+        <button
+            onClick={() => setTheme(isDark ? "light" : "dark")}
+            className="cursor-pointer w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100/60 dark:bg-white/10 backdrop-blur-md border border-gray-400/50 shadow-md transition hover:bg-gray-300/50 dark:hover:bg-white/20"
+        >
+            {isDark ? (
+                <Sun className="h-5 w-5 text-yellow-200" />
+            ) : (
+                <Moon className="h-5 w-5 text-gray-800" />
+            )}
+        </button>
     )
 }
