@@ -1,7 +1,9 @@
-import Image from "next/image";
 import Intro from "@/components/intro";
 import React from "react";
 import ThemeToggle from "@/components/ui/mode-toggle";
+import SectionDivider from "@/components/section-divider";
+import About from "@/components/about";
+import Projects from "@/components/projects";
 
 export default function Home() {
     return (
@@ -9,7 +11,10 @@ export default function Home() {
             <div className="fixed bottom-0 right-0 py-4 px-4">
                 <ThemeToggle/>
             </div>
-            <Intro/>
+            <Intro />
+            <SectionDivider />
+            <About />
+            <Projects />
         </main>
     );
 }
