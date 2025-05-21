@@ -4,6 +4,8 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import sistemaRecaudacion from "@/public/sistemaRecaudacion.png"
 import granBazarAutos from "@/public/granBazarAutos.png"
+import innerDroid from "@/public/innerDroid.png"
+import appRecaudacion from "@/public/appRecaudacion.png"
 
 export const links = [
     {
@@ -61,14 +63,28 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "Sistema de Recaudación",
         description:
             "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
         tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
         imageUrl: sistemaRecaudacion,
     },
     {
-        title: "rmtDev",
+        title: "App de Recaudación",
+        description:
+            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+        imageUrl: appRecaudacion,
+    },
+    {
+        title: "InnerDroid",
+        description:
+            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+        imageUrl: innerDroid,
+    },
+    {
+        title: "Gran Bazar de Autos",
         description:
             "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
         tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
