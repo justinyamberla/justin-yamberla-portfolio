@@ -34,7 +34,7 @@ export default function Header() {
                                     className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-slate-950 dark:hover:text-teal-200 transition", {"text-slate-950 dark:text-teal-200": activeSection === link.name})}
                                     onClick={() => {
                                         setActiveSection(link.name);
-                                        setTimeOfLastClick(Date.now())
+                                        setTimeOfLastClick(Date.now());
                                     }}
                                 >
                                     {link.name}
