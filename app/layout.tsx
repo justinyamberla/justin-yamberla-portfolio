@@ -3,6 +3,7 @@ import {Montserrat} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "@/components/theme-provider";
 import Header from "@/components/header";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
 const montserrat = Montserrat({
     variable: "--font-montserrat",
@@ -28,8 +29,10 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
           enableSystem
           disableTransitionOnChange
       >
-          <Header />
-          {children}
+          <ActiveSectionContextProvider>
+              <Header />
+              {children}
+          </ActiveSectionContextProvider>
       </ThemeProvider>
       </body>
     </html>
