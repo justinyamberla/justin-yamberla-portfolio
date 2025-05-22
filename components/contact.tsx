@@ -50,7 +50,7 @@ export default function Contact() {
                 }}
             >
                 <input
-                    className="h-14 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 borderBlack"
+                    className="h-14 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 borderBlack dark:focus:bg-opacity-100 transition-all dark:outline-none"
                     type="email"
                     name="senderEmail"
                     placeholder="Your email"

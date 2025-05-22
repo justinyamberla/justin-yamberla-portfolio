@@ -31,7 +31,7 @@ export default function Header() {
                             >
                                 <Link
                                     href={link.hash}
-                                    className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-slate-950 dark:hover:text-teal-200 transition", {"text-slate-950 dark:text-teal-200": activeSection === link.name})}
+                                    className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-slate-300 dark:hover:text-slate-400 transition", {"text-slate-100 dark:text-slate-200": activeSection === link.name})}
                                     onClick={() => {
                                         setActiveSection(link.name);
                                         setTimeOfLastClick(Date.now());
@@ -40,7 +40,7 @@ export default function Header() {
                                     {link.name}
                                     {link.name === activeSection && (
                                         <motion.span
-                                            className="bg-slate-200 dark:bg-slate-900 rounded-full absolute inset-0 -z-10"
+                                            className="bg-slate-800 dark:bg-slate-600/50 rounded-full absolute inset-0 -z-10"
                                             layoutId="activeSection"
                                             transition={{
                                                 type: "spring",

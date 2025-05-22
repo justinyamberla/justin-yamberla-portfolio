@@ -1,15 +1,24 @@
 "use client";
 
-import React from "react";
+import React, {useEffect, useState} from "react";
 import SectionHeading from "@/components/section-heading";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css"
-import {experiencesData} from "@/lib/data";
-import {useSectionInView} from "@/lib/hooks";
+import { experiencesData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
+import { useTheme } from "next-themes";
 
 export default function Experience() {
 
     const { ref } = useSectionInView("Experience");
+    const { theme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <section
@@ -18,25 +27,25 @@ export default function Experience() {
             className="scroll-mt-28 mb-28 sm:mb-40"
         >
             <SectionHeading>Mi experiencia</SectionHeading>
-            <VerticalTimeline lineColor="#9ca3af">
+            <VerticalTimeline lineColor={theme === "dark" ? "#1e293b" : "#f3f4f6"}>
                 {
                     experiencesData.map((item, index) => (
                         <React.Fragment key={index}>
                             <VerticalTimelineElement
                                 contentStyle={{
-                                    background: "#f3f4f6",
+                                    background: theme === "dark" ? "#1e293b" : "#f3f4f6",
                                     boxShadow: "none",
-                                    border: "1px solid #e5e7eb",
+                                    border: `1px solid ${theme === "dark" ? "#334155" : "#e2e8f0"}`,
                                     textAlign: "left",
                                     padding: "1.3rem 2rem"
                                 }}
                                 contentArrowStyle={{
-                                    borderRight: "0.4rem solid #9ca3af",
+                                    borderRight: `0.4rem solid ${theme === "dark" ? "#1e293b" : "#f3f4f6"}`,
                                 }}
                                 date={item.date}
                                 icon={item.icon}
                                 iconStyle={{
-                                    background: "white",
+                                    background: theme === "dark" ? "#1e293b" : "#f3f4f6",
                                     fontSize: "1.5rem"
                                 }}
                             >
@@ -46,7 +55,7 @@ export default function Experience() {
                                 <p className="font-normal !mt-0">
                                     {item.location}
                                 </p>
-                                <p className="!mt-1 !font-normal text-slate-800">
+                                <p className="!mt-1 !font-normal text-slate-800 dark:text-slate-200">
                                     {item.description}
                                 </p>
                             </VerticalTimelineElement>
