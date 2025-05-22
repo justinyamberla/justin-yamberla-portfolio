@@ -5,6 +5,7 @@ import {ThemeProvider} from "@/components/theme-provider";
 import Header from "@/components/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/footer";
 
 const montserrat = Montserrat({
     variable: "--font-montserrat",
@@ -33,7 +34,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
           <ActiveSectionContextProvider>
               <Header />
               {children}
-
+              <Footer />
               <Toaster position="top-right" />
           </ActiveSectionContextProvider>
       </ThemeProvider>
