@@ -10,7 +10,6 @@ export const validateString = (value: unknown, maxLength: number) => {
 }
 
 export const getErrorMessage = (error: unknown): { error: string } => {
-  let message: string;
 
   if (error instanceof Error) {
     return { error: error.message };
