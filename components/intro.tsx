@@ -13,7 +13,7 @@ import {useActiveSectionContext} from "@/context/active-section-context";
 export default function Intro() {
 
     const { ref } = useSectionInView("Inicio", 0.5);
-    const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+    const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return(
         <section ref={ref} id="incio" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
