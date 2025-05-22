@@ -2,7 +2,7 @@
 
 import React, {useEffect, useState} from "react";
 import SectionHeading from "@/components/section-heading";
-// @ts-expect-error
+// @ts-expect-error No types available for this module
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css"
 import { experiencesData } from "@/lib/data";
