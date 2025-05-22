@@ -9,85 +9,78 @@ import appRecaudacion from "@/public/appRecaudacion.png"
 
 export const links = [
     {
-        name: "Home",
-        hash: "#home",
+        name: "Inicio",
+        hash: "#inicio",
     },
     {
-        name: "About",
-        hash: "#about",
+        name: "Acerca",
+        hash: "#acerca",
     },
     {
-        name: "Projects",
-        hash: "#projects",
+        name: "Proyectos",
+        hash: "#proyectos",
     },
     {
-        name: "Skills",
-        hash: "#skills",
+        name: "Habilidades",
+        hash: "#habilidades",
     },
     {
-        name: "Experience",
-        hash: "#experience",
+        name: "Experiencia",
+        hash: "#experiencia",
     },
     {
-        name: "Contact",
-        hash: "#contact",
+        name: "Contacto",
+        hash: "#contacto",
     },
 ] as const;
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
-        description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+        title: "Ingeniería de Software",
+        location: "Quito, Ecuador",
+        description: "Me gradué como Ingeniero de Software después de una carrera de 4 años en la Escuela Politécnica Nacional, e inmediatemante comencé a trabajar como desarrollador frontend.",
         icon: React.createElement(LuGraduationCap),
-        date: "2019",
+        date: "2019 - 2023",
     },
     {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
-        description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-        icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
-    },
-    {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
-        description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+        title: "Desarrollador Móvil Full-stack",
+        location: "Manabí, Ecuador",
+        description: "Trabajé como desarrollador móvil y full-stack durante casi un año de manera remota para Innovus Software. Me encargué del desarrollo de una plataforma de compra y venta de autos, así como de la app InnerDroid.",
         icon: React.createElement(FaReact),
-        date: "2021 - present",
+        date: "2023 - 2024",
+    },
+    {
+        title: "Analista de Desarrollo de Sistemas",
+        location: "Otavalo, Ecuador",
+        description: "Después de trabajar como desarrollador móvil, me uní al GAD Municipal de Otavalo como analista de desarrollo de sistemas. Me encargué del desarrollo de una app para el cobro de tarifas a comerciantes y la API REST del sistema de recaudación.",
+        icon: React.createElement(CgWorkAlt),
+        date: "2024 - 2025",
     },
 ] as const;
 
 export const projectsData = [
     {
         title: "App de Recaudación",
-        description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+        description: "Desarrollé una app para el cobro de tarifas a comerciantes como parte del Sistema de Recaudación para el GAD Municipal de Otavalo.",
+        tags: ["React", "TypeScript", "React Native", "Expo", "Async Storage"],
         imageUrl: appRecaudacion,
     },
     {
         title: "Sistema de Recaudación",
-        description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+        description: "Sistema de Recaudación para el cobro de tarifas a comerciantes para el GAD Municipal de Otavalo. Desarrollé la aplicación web de administración y la API REST.",
+        tags: ["PHP", "MySQL", "JWT", "JavaScript", "Bootstrap"],
         imageUrl: sistemaRecaudacion,
     },
     {
         title: "InnerDroid",
-        description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+        description: "Desarrollador móvil full-stack en Innovus Software. Me encargué de la refactorización, optimización, mantenimiento y desarrollo de nuevas funcionalidades de la app InnerDroid.",
+        tags: ["React Native", "Expo", "PHP", "MySQL", "MongoDB"],
         imageUrl: innerDroid,
     },
     {
         title: "Gran Bazar de Autos",
-        description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+        description: "Como desarrollador frontend en Innovus Software, trabajé en la creación del frontend para una plataforma de compra y venta de autos, así como la conexión con el backend.",
+        tags: ["React", "Next.js", "React Bootstrap", "JavaScript", "SASS"],
         imageUrl: granBazarAutos,
     },
 ] as const;
@@ -100,16 +93,18 @@ export const skillsData = [
     "React",
     "Next.js",
     "Node.js",
-    "Git",
     "Tailwind",
-    "Prisma",
+    "PHP",
+    "Laravel",
     "MongoDB",
-    "Redux",
-    "GraphQL",
-    "Apollo",
-    "Express",
+    "MySQL",
     "PostgreSQL",
     "Python",
-    "Django",
-    "Framer Motion",
+    "Flask",
+    "React Native",
+    "Expo",
+    "Kotlin",
+    "Firebase",
+    "Git",
+    "GitHub",
 ] as const;

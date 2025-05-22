@@ -26,16 +26,16 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
             }}
             className="group mb-3 sm:mb-8 last:mb-0"
         >
-            <section className="bg-slate-300 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[22rem] hover:bg-slate-100 transition sm:group-even:pl-8 dark:text-white dark:bg-slate-800 dark:hover:bg-slate-700">
-                <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-                    <h3 className="text-2xl font-semibold">{title}</h3>
-                    <p className="mt-2 leading-relaxed text-slate-800 dark:text-slate-100/70">
+            <section className="bg-slate-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[22rem] hover:bg-slate-300 transition sm:group-even:pl-8 dark:text-white dark:bg-slate-800 dark:hover:bg-slate-700/80">
+                <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-6 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+                    <h3 className="text-2xl font-semibold text-slate-950 dark:text-slate-100">{title}</h3>
+                    <p className="mt-2 mb-2 leading-relaxed text-slate-900 dark:text-slate-100/70">
                         {description}
                     </p>
                     <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
                         {tags.map((tag, index) => (
                             <li
-                                className="bg-slate-950/70 dark:bg-slate-950/80 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                                className="bg-slate-800 dark:bg-slate-950 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
                                 key={index}
                             >
                                 {tag}

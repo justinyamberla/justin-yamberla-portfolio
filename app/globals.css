@@ -4,5 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 .borderBlack {
-  @apply border border-black/10;
+  @apply border border-slate-800/10;
+}
+
+.borderWhite {
+  @apply border border-slate-100/10;
 }

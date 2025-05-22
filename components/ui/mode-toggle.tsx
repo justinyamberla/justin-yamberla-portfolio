@@ -19,12 +19,12 @@ export default function ThemeToggle() {
     return (
         <button
             onClick={() => setTheme(isDark ? "light" : "dark")}
-            className="cursor-pointer w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100/60 dark:bg-white/10 backdrop-blur-md border border-gray-400/50 shadow-md transition hover:bg-gray-300/50 dark:hover:bg-white/20"
+            className="cursor-pointer w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800 dark:bg-slate-800/50 backdrop-blur-md shadow-md transition hover:bg-slate-950 dark:hover:bg-slate-800"
         >
             {isDark ? (
-                <Sun className="h-5 w-5 text-yellow-200" />
+                <Sun className="h-5 w-5 text-slate-100" />
             ) : (
-                <Moon className="h-5 w-5 text-gray-800" />
+                <Moon className="h-5 w-5 text-slate-300 hover:text-slate-100" />
             )}
         </button>
     )

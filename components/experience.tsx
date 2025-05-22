@@ -10,7 +10,7 @@ import { useTheme } from "next-themes";
 
 export default function Experience() {
 
-    const { ref } = useSectionInView("Experience");
+    const { ref } = useSectionInView("Experiencia");
     const { theme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
@@ -23,7 +23,7 @@ export default function Experience() {
     return (
         <section
             ref={ref}
-            id="experience"
+            id="experiencia"
             className="scroll-mt-28 mb-28 sm:mb-40"
         >
             <SectionHeading>Mi experiencia</SectionHeading>
