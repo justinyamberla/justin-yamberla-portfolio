@@ -13,14 +13,16 @@ export const getErrorMessage = (error: unknown): { error: string } => {
   let message: string;
 
   if (error instanceof Error) {
-    message = error.message;
-  } else if (error && typeof error === 'object' && 'message' in error) {
-    message = String((error as any).message);
-  } else if (typeof error === 'string') {
-    message = error;
-  } else {
-    message = "Unknown error";
+    return { error: error.message };
   }
 
-  return { error: message };
+  if (typeof error === "object" && error !== null && "message" in error && typeof (error as { message: unknown }).message === "string") {
+    return { error: (error as { message: string }).message };
+  }
+
+  if (typeof error === "string") {
+    return { error };
+  }
+
+  return { error: "Unknown error" };
 };
