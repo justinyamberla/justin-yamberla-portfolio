@@ -61,10 +61,10 @@ export default function Intro() {
                 transition={{delay: 0.1}}
             >
                 <Link
-                    href="#contact"
+                    href="#contacto"
                     className="group bg-slate-800 dark:bg-slate-950 outline-none text-white px-7 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 hover:bg-slate-900 dark:hover:bg-slate-700 active:scale-105 transition"
                     onClick={() => {
-                        setActiveSection("Contact");
+                        setActiveSection("Contacto");
                         setTimeOfLastClick(Date.now());
                     }}
                 >
