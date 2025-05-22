@@ -2,7 +2,7 @@
 
 import React, {useEffect, useState} from "react";
 import SectionHeading from "@/components/section-heading";
-// @ts-ignore
+// @ts-expect-error
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css"
 import { experiencesData } from "@/lib/data";
