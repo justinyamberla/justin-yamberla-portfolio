@@ -31,7 +31,7 @@ export default function Contact() {
             }}
         >
             <SectionHeading>Contáctame</SectionHeading>
-            <p className="text-slate-800 dark:text-slate-200 -mt-5">
+            <p className="text-slate-800 text-center dark:text-slate-200 -mt-5">
                 Por favor, contáctame directamente escribiendo a {" "}
                 <a className="underline" href="mailto:imalexisdzn@gmail.com">imalexisdzn@gmail.com</a>
             </p>

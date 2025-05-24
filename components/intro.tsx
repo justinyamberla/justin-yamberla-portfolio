@@ -9,6 +9,7 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import {useActiveSectionContext} from "@/context/active-section-context";
+import photo from "@/public/photo.png"
 
 export default function Intro() {
 
@@ -25,7 +26,7 @@ export default function Intro() {
                         transition={{type: "tween", duration: 0.2}}
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+                            src={photo}
                             alt="Justin portrait"
                             width="200"
                             height="200"
