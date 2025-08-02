@@ -6,6 +6,7 @@ import sistemaRecaudacion from "@/public/sistemaRecaudacion.png"
 import granBazarAutos from "@/public/granBazarAutos.png"
 import innerDroid from "@/public/innerDroid.png"
 import appRecaudacion from "@/public/appRecaudacion.png"
+import sistemaSorteos from "@/public/sistemaSorteos.png"
 
 export const links = [
     {
@@ -60,6 +61,12 @@ export const experiencesData = [
 
 export const projectsData = [
     {
+        title: "Sistema Web de Sorteos",
+        description: "Aplicación de sorteos y administración desarrollada para Ramírez Group. Desarrollé tanto el frontend como el backend de la aplicación y realicé el despliegue en un VPS personalizado.",
+        tags: ["TypeScript", "Next.js", "PHP", "Laravel", "JWT", "PayPhone", "Mailtrap", "Digital Ocean"],
+        imageUrl: sistemaSorteos,
+    },
+    {
         title: "App de Recaudación",
         description: "Desarrollé una app para el cobro de tarifas a comerciantes como parte del Sistema de Recaudación para el GAD Municipal de Otavalo.",
         tags: ["React", "TypeScript", "React Native", "Expo", "Async Storage"],
@@ -107,4 +114,6 @@ export const skillsData = [
     "Firebase",
     "Git",
     "GitHub",
+    "Docker",
+    "Digital Ocean"
 ] as const;
