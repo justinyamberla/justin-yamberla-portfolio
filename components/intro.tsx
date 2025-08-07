@@ -52,7 +52,7 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
             >
                 <span className="font-bold">¡Hola! Soy Justin Yamberla.</span> Soy Ingeniero de Software y Desarrollador Full Stack con 3 años
-                de experiencia. Disfruto mucho crear soluciones tecnológicas, apliciones web y apps móviles.
+                de experiencia. Disfruto mucho crear soluciones tecnológicas, aplicaciones web y apps móviles.
             </motion.h1>
 
             <motion.div
