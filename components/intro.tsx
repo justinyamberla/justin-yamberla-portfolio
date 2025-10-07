@@ -73,7 +73,7 @@ export default function Intro() {
                 </Link>
                 <a
                     className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none text-slate-800 dark:text-slate-100/50 hover:text-slate-950 dark:hover:text-slate-100 focus:scale-110 hover:scale-110 hover:bg-slate-500/10 active:scale-105 transition cursor-pointer border-black/10 dark:bg-slate-200/10"
-                    href="/CV_Justin%20Yamberla.pdf"
+                    href="/CV_JustinYamberla.pdf"
                     download
                 >
                     Descargar CV <HiDownload />
