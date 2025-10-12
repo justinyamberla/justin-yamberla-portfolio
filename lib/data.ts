@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import {FaReact, FaUserCog} from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import sistemaRecaudacion from "@/public/sistemaRecaudacion.png"
 import granBazarAutos from "@/public/granBazarAutos.png"
@@ -53,9 +53,16 @@ export const experiencesData = [
     {
         title: "Analista de Desarrollo de Sistemas",
         location: "Otavalo, Ecuador",
-        description: "Después de trabajar como desarrollador móvil, me uní al GAD Municipal de Otavalo como analista de desarrollo de sistemas. Me encargué del desarrollo de una app para el cobro de tarifas a comerciantes y la API REST del sistema de recaudación.",
+        description: "Después de trabajar como desarrollador móvil, me uní al GAD Municipal de Otavalo como analista de desarrollo de sistemas. Desarrollé una app para el cobro de tarifas a comerciantes y la API REST del sistema de recaudación.",
         icon: React.createElement(CgWorkAlt),
         date: "2024 - 2025",
+    },
+    {
+        title: "Desarrollador de Software",
+        location: "Quito, Ecuador",
+        description: "Tras mi experiencia en el GAD Municipal de Otavalo, me uní a Citytech, donde desarrollo y optimizo Easybrok, un sistema para brokers de seguros. Refactorizo código heredado, resuelvo incidencias y agrego nuevas funcionalidades.",
+        icon: React.createElement(FaUserCog),
+        date: "2025 - Presente",
     },
 ] as const;
 
