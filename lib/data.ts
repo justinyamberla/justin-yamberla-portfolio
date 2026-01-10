@@ -1,7 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import {FaReact, FaUserCog} from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import {LuGraduationCap, LuRocket} from "react-icons/lu";
 import sistemaRecaudacion from "@/public/sistemaRecaudacion.png"
 import granBazarAutos from "@/public/granBazarAutos.png"
 import innerDroid from "@/public/innerDroid.png"
@@ -42,6 +42,13 @@ export const experiencesData = [
         description: "Me gradué como Ingeniero de Software después de una carrera de 4 años en la Escuela Politécnica Nacional, e inmediatemante comencé a trabajar como desarrollador frontend.",
         icon: React.createElement(LuGraduationCap),
         date: "2019 - 2023",
+    },
+    {
+        title: "Desarrollador Freelancer",
+        location: "Otavalo, Ecuador",
+        description: "Inicié mi carrera como Desarrollador de Software independiente. A partir de entonces, he trabajado en varios proyectos web y móviles para clientes locales, desarrollando aplicaciones a medida según sus necesidades.",
+        icon: React.createElement(LuRocket),
+        date: "2022 - Presente",
     },
     {
         title: "Desarrollador Móvil Full-stack",
