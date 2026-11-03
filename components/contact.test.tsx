@@ -78,4 +78,25 @@ describe("Contact", () => {
 
         expect(sendEmailMock).not.toHaveBeenCalled();
     });
+
+    // Cada campo obligatorio por separado: si sólo faltara uno, el otro no debe ocultar el problema
+    it("no envía nada si falta el email", async () => {
+        const user = userEvent.setup();
+        renderContact();
+
+        await user.type(screen.getByPlaceholderText("Tu mensaje"), "Hola");
+        await user.click(screen.getByRole("button", { name: /submit/i }));
+
+        expect(sendEmailMock).not.toHaveBeenCalled();
+    });
+
+    it("no envía nada si falta el mensaje", async () => {
+        const user = userEvent.setup();
+        renderContact();
+
+        await user.type(screen.getByPlaceholderText("Tu email"), "ana@correo.com");
+        await user.click(screen.getByRole("button", { name: /submit/i }));
+
+        expect(sendEmailMock).not.toHaveBeenCalled();
+    });
 });
