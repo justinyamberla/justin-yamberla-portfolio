@@ -1,0 +1,12 @@
+# Salida de builds
+.next
+out
+build
+coverage
+
+# Plantillas de ejemplo de react-email, no forman parte del portfolio
+react-email-starter
+
+# Generados automáticamente
+package-lock.json
+next-env.d.ts
