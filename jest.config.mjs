@@ -8,6 +8,10 @@ const createJestConfig = nextJest({
 
 /** @type {import('jest').Config} */
 const config = {
+    // Navegador simulado para poder renderizar componentes
+    testEnvironment: "jsdom",
+    // Se ejecuta antes de cada archivo de test, con Jest ya cargado
+    setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
     // Mismo alias que tsconfig.json ("@/*": ["./*"]), para que "@/lib/utils" se resuelva en los tests
     moduleNameMapper: {
         "^@/(.*)$": "<rootDir>/$1",
