@@ -1,0 +1,63 @@
+# Integración continua: verifica cada PR hacia main y cada push a main.
+# El build y el deploy los hace Vercel; este workflow sólo verifica el código.
+name: CI
+
+on:
+    pull_request:
+        branches: [main]
+    push:
+        branches: [main]
+
+# Si llega un push nuevo al mismo PR, se cancela la ejecución anterior que ya quedó obsoleta
+concurrency:
+    group: ci-${{ github.ref }}
+    cancel-in-progress: true
+
+permissions:
+    contents: read
+
+jobs:
+    # Verificaciones estáticas: no ejecutan el código
+    quality:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Descargar el código
+              uses: actions/checkout@v7
+
+            - name: Instalar Node.js
+              uses: actions/setup-node@v7
+              with:
+                  node-version: 24
+                  cache: npm
+
+            # npm ci instala exactamente lo que dice package-lock.json
+            - name: Instalar dependencias
+              run: npm ci
+
+            - name: Revisar formato (Prettier)
+              run: npm run format:check
+
+            - name: Revisar código (ESLint)
+              run: npm run lint
+
+            - name: Revisar tipos (TypeScript)
+              run: npx tsc --noEmit
+
+    # Tests de Jest: unitarios, de componentes y de la Server Action con MSW
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Descargar el código
+              uses: actions/checkout@v7
+
+            - name: Instalar Node.js
+              uses: actions/setup-node@v7
+              with:
+                  node-version: 24
+                  cache: npm
+
+            - name: Instalar dependencias
+              run: npm ci
+
+            - name: Ejecutar tests
+              run: npm test -- --ci

@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import SectionHeading from "@/components/section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
@@ -16,12 +16,11 @@ const fadeInAnimationVariants = {
         y: 0,
         transition: {
             delay: 0.05 * index,
-        }
+        },
     }),
-}
+};
 
 export default function Skills() {
-
     const { ref } = useSectionInView("Habilidades");
 
     return (
@@ -32,21 +31,19 @@ export default function Skills() {
         >
             <SectionHeading>Mis habilidades</SectionHeading>
             <ul className="flex flex-wrap justify-center gap-2 text-lg text-slate-800 dark:text-slate-200">
-                {
-                    skillsData.map((skill, index) => (
-                        <motion.li
-                            key={index}
-                            className="bg-slate-300 dark:bg-slate-800 border-black/[0.1] rounded-xl px-5 py-3"
-                            variants={fadeInAnimationVariants}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            custom={index}
-                        >
-                            {skill}
-                        </motion.li>
-                    ))
-                }
+                {skillsData.map((skill, index) => (
+                    <motion.li
+                        key={index}
+                        className="bg-slate-300 dark:bg-slate-800 border-black/[0.1] rounded-xl px-5 py-3"
+                        variants={fadeInAnimationVariants}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        custom={index}
+                    >
+                        {skill}
+                    </motion.li>
+                ))}
             </ul>
         </section>
     );

@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <main className="flex flex-col items-center px-4">
             <div className="fixed bottom-0 right-0 py-4 px-4">
-                <ThemeToggle/>
+                <ThemeToggle />
             </div>
             <Intro />
             <SectionDivider />

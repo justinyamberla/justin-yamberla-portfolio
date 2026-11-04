@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Footer() {
     return (
@@ -7,8 +7,10 @@ export default function Footer() {
                 &copy; 2025 Justin Yamberla. Todos los derechos reservados.
             </small>
             <p className="text-xs">
-                <span className="font-semibold">Acerca de este sitio:</span> hecho con React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting.
+                <span className="font-semibold">Acerca de este sitio:</span> hecho con React &
+                Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion,
+                React Email & Resend, Vercel hosting.
             </p>
         </footer>
-    )
+    );
 }

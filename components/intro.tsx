@@ -8,22 +8,25 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
-import {useActiveSectionContext} from "@/context/active-section-context";
-import photo from "@/public/photo.png"
+import { useActiveSectionContext } from "@/context/active-section-context";
+import photo from "@/public/photo.png";
 
 export default function Intro() {
-
     const { ref } = useSectionInView("Inicio", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-    return(
-        <section ref={ref} id="inicio" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    return (
+        <section
+            ref={ref}
+            id="inicio"
+            className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+        >
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <motion.div
-                        initial={{opacity: 0, scale: 0}}
-                        animate={{opacity: 1, scale: 1}}
-                        transition={{type: "tween", duration: 0.2}}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ type: "tween", duration: 0.2 }}
                     >
                         <Image
                             src={photo}
@@ -36,11 +39,16 @@ export default function Intro() {
                         />
                         <motion.span
                             className="absolute bottom-0 right-0 text-4xl"
-                            initial={{opacity: 0, scale: 0}}
-                            animate={{opacity: 1, scale: 1}}
-                            transition={{type: "spring", stiffness: 125, delay: 0.5, duration: 0.7}}
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 125,
+                                delay: 0.5,
+                                duration: 0.7,
+                            }}
                         >
-                        👋
+                            👋
                         </motion.span>
                     </motion.div>
                 </div>
@@ -51,15 +59,16 @@ export default function Intro() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <span className="font-bold">¡Hola! Soy Justin Yamberla.</span> Soy Ingeniero de Software y Desarrollador Full Stack con 3 años
-                de experiencia. Disfruto mucho crear soluciones tecnológicas, aplicaciones web y apps móviles.
+                <span className="font-bold">¡Hola! Soy Justin Yamberla.</span> Soy Ingeniero de
+                Software y Desarrollador Full Stack con 3 años de experiencia. Disfruto mucho crear
+                soluciones tecnológicas, aplicaciones web y apps móviles.
             </motion.h1>
 
             <motion.div
                 className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{delay: 0.1}}
+                transition={{ delay: 0.1 }}
             >
                 <Link
                     href="#contacto"

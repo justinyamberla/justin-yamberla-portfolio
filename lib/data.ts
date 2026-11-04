@@ -1,12 +1,12 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import {FaReact, FaUserCog} from "react-icons/fa";
-import {LuGraduationCap, LuRocket} from "react-icons/lu";
-import sistemaRecaudacion from "@/public/sistemaRecaudacion.png"
-import granBazarAutos from "@/public/granBazarAutos.png"
-import innerDroid from "@/public/innerDroid.png"
-import appRecaudacion from "@/public/appRecaudacion.png"
-import sistemaSorteos from "@/public/sistemaSorteos.png"
+import { FaReact, FaUserCog } from "react-icons/fa";
+import { LuGraduationCap, LuRocket } from "react-icons/lu";
+import sistemaRecaudacion from "@/public/sistemaRecaudacion.png";
+import granBazarAutos from "@/public/granBazarAutos.png";
+import innerDroid from "@/public/innerDroid.png";
+import appRecaudacion from "@/public/appRecaudacion.png";
+import sistemaSorteos from "@/public/sistemaSorteos.png";
 
 export const links = [
     {
@@ -39,35 +39,40 @@ export const experiencesData = [
     {
         title: "Ingeniería de Software",
         location: "Quito, Ecuador",
-        description: "Me gradué como Ingeniero de Software después de una carrera de 4 años en la Escuela Politécnica Nacional, e inmediatemante comencé a trabajar como desarrollador frontend.",
+        description:
+            "Me gradué como Ingeniero de Software después de una carrera de 4 años en la Escuela Politécnica Nacional, e inmediatemante comencé a trabajar como desarrollador frontend.",
         icon: React.createElement(LuGraduationCap),
         date: "2019 - 2023",
     },
     {
         title: "Desarrollador Freelancer",
         location: "Otavalo, Ecuador",
-        description: "Inicié mi carrera como Desarrollador de Software independiente. A partir de entonces, he trabajado en varios proyectos web y móviles para clientes locales, desarrollando aplicaciones a medida según sus necesidades.",
+        description:
+            "Inicié mi carrera como Desarrollador de Software independiente. A partir de entonces, he trabajado en varios proyectos web y móviles para clientes locales, desarrollando aplicaciones a medida según sus necesidades.",
         icon: React.createElement(LuRocket),
         date: "2022 - Presente",
     },
     {
         title: "Desarrollador Móvil Full-stack",
         location: "Manabí, Ecuador",
-        description: "Trabajé como desarrollador móvil y full-stack durante casi un año de manera remota para Innovus Software. Me encargué del desarrollo de una plataforma de compra y venta de autos, así como de la app InnerDroid.",
+        description:
+            "Trabajé como desarrollador móvil y full-stack durante casi un año de manera remota para Innovus Software. Me encargué del desarrollo de una plataforma de compra y venta de autos, así como de la app InnerDroid.",
         icon: React.createElement(FaReact),
         date: "2023 - 2024",
     },
     {
         title: "Analista de Desarrollo de Sistemas",
         location: "Otavalo, Ecuador",
-        description: "Después de trabajar como desarrollador móvil, me uní al GAD Municipal de Otavalo como analista de desarrollo de sistemas. Desarrollé una app para el cobro de tarifas a comerciantes y la API REST del sistema de recaudación.",
+        description:
+            "Después de trabajar como desarrollador móvil, me uní al GAD Municipal de Otavalo como analista de desarrollo de sistemas. Desarrollé una app para el cobro de tarifas a comerciantes y la API REST del sistema de recaudación.",
         icon: React.createElement(CgWorkAlt),
         date: "2024 - 2025",
     },
     {
         title: "Desarrollador de Software",
         location: "Quito, Ecuador",
-        description: "Tras mi experiencia en el GAD Municipal de Otavalo, me uní a Citytech, donde desarrollo y optimizo Easybrok, un sistema para brokers de seguros. Refactorizo código heredado, resuelvo incidencias y agrego nuevas funcionalidades.",
+        description:
+            "Tras mi experiencia en el GAD Municipal de Otavalo, me uní a Citytech, donde desarrollo y optimizo Easybrok, un sistema para brokers de seguros. Refactorizo código heredado, resuelvo incidencias y agrego nuevas funcionalidades.",
         icon: React.createElement(FaUserCog),
         date: "2025 - Presente",
     },
@@ -76,31 +81,45 @@ export const experiencesData = [
 export const projectsData = [
     {
         title: "Sistema Web de Sorteos",
-        description: "Aplicación de sorteos y administración desarrollada para Ramírez Group. Desarrollé tanto el frontend como el backend de la aplicación y realicé el despliegue en un VPS personalizado.",
-        tags: ["TypeScript", "Next.js", "PHP", "Laravel", "JWT", "PayPhone", "Mailtrap", "Digital Ocean"],
+        description:
+            "Aplicación de sorteos y administración desarrollada para Ramírez Group. Desarrollé tanto el frontend como el backend de la aplicación y realicé el despliegue en un VPS personalizado.",
+        tags: [
+            "TypeScript",
+            "Next.js",
+            "PHP",
+            "Laravel",
+            "JWT",
+            "PayPhone",
+            "Mailtrap",
+            "Digital Ocean",
+        ],
         imageUrl: sistemaSorteos,
     },
     {
         title: "App de Recaudación",
-        description: "Desarrollé una app para el cobro de tarifas a comerciantes como parte del Sistema de Recaudación para el GAD Municipal de Otavalo.",
+        description:
+            "Desarrollé una app para el cobro de tarifas a comerciantes como parte del Sistema de Recaudación para el GAD Municipal de Otavalo.",
         tags: ["React", "TypeScript", "React Native", "Expo", "Async Storage"],
         imageUrl: appRecaudacion,
     },
     {
         title: "Sistema de Recaudación",
-        description: "Sistema de Recaudación para el cobro de tarifas a comerciantes para el GAD Municipal de Otavalo. Desarrollé la aplicación web de administración y la API REST.",
+        description:
+            "Sistema de Recaudación para el cobro de tarifas a comerciantes para el GAD Municipal de Otavalo. Desarrollé la aplicación web de administración y la API REST.",
         tags: ["PHP", "MySQL", "JWT", "JavaScript", "Bootstrap"],
         imageUrl: sistemaRecaudacion,
     },
     {
         title: "InnerDroid",
-        description: "Desarrollador móvil full-stack en Innovus Software. Me encargué de la refactorización, optimización, mantenimiento y desarrollo de nuevas funcionalidades de la app InnerDroid.",
+        description:
+            "Desarrollador móvil full-stack en Innovus Software. Me encargué de la refactorización, optimización, mantenimiento y desarrollo de nuevas funcionalidades de la app InnerDroid.",
         tags: ["React Native", "Expo", "PHP", "MySQL", "MongoDB"],
         imageUrl: innerDroid,
     },
     {
         title: "Gran Bazar de Autos",
-        description: "Como desarrollador frontend en Innovus Software, trabajé en la creación del frontend para una plataforma de compra y venta de autos, así como la conexión con el backend.",
+        description:
+            "Como desarrollador frontend en Innovus Software, trabajé en la creación del frontend para una plataforma de compra y venta de autos, así como la conexión con el backend.",
         tags: ["React", "Next.js", "React Bootstrap", "JavaScript", "SASS"],
         imageUrl: granBazarAutos,
     },
@@ -129,5 +148,5 @@ export const skillsData = [
     "Git",
     "GitHub",
     "Docker",
-    "Digital Ocean"
+    "Digital Ocean",
 ] as const;

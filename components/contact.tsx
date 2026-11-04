@@ -9,7 +9,6 @@ import SubmitBtn from "@/components/submit-btn";
 import toast from "react-hot-toast";
 
 export default function Contact() {
-
     const { ref } = useSectionInView("Contacto");
 
     return (
@@ -24,16 +23,18 @@ export default function Contact() {
                 opacity: 1,
             }}
             transition={{
-                duration: 1
+                duration: 1,
             }}
             viewport={{
-                once: true
+                once: true,
             }}
         >
             <SectionHeading>Contáctame</SectionHeading>
             <p className="text-slate-800 text-center dark:text-slate-200 -mt-5">
-                Por favor, contáctame directamente escribiendo a {" "}
-                <a className="underline" href="mailto:imalexisdzn@gmail.com">imalexisdzn@gmail.com</a>
+                Por favor, contáctame directamente escribiendo a{" "}
+                <a className="underline" href="mailto:imalexisdzn@gmail.com">
+                    imalexisdzn@gmail.com
+                </a>
             </p>
 
             <form
@@ -41,7 +42,7 @@ export default function Contact() {
                 action={async (formData: FormData) => {
                     const result = await sendEmail(formData);
 
-                    if ('error' in result) {
+                    if ("error" in result) {
                         toast.error(result.error);
                         return;
                     }
@@ -67,5 +68,5 @@ export default function Contact() {
                 <SubmitBtn />
             </form>
         </motion.section>
-    )
+    );
 }
