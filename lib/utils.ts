@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export const validateString = (value: unknown, maxLength: number) => {
     if (typeof value !== "string") return false; // desde aquí, value es string
     if (!value.trim()) return false; // vacío o sólo espacios
-    return value.length <= maxLength;
+    return value.length < maxLength;
 };
 
 export const getErrorMessage = (error: unknown): { error: string } => {
